@@ -1,0 +1,30 @@
+[1;31m
+Start test 1[0m
+
+(  .   ____          _            __ _ _
+) /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+*( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
++ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+*  '  |____| .__|_| |_|_| |_\__, | / / / /
+) =========|_|==============|___/=/_/_/_/
++ :: Spring Boot ::                (v2.5.6)
+
+Å2022-06-24 14:30:16.874  INFO 22018 --- [    Test worker] calculator.WebCalculatorApplication      : Starting WebCalculatorApplication using Java 17.0.2 on MacBook-Pro-ksean.local with PID 22018 (started by ksean in /Users/ksean/IdeaProjects/Cinema Room REST Service/Topics/Posting and deleting data via REST/Web calculator)
+¦2022-06-24 14:30:16.879  INFO 22018 --- [    Test worker] calculator.WebCalculatorApplication      : No active profile set, falling back to default profiles: default
+’2022-06-24 14:30:18.822  INFO 22018 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
+2022-06-24 14:30:18.849  INFO 22018 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+•2022-06-24 14:30:18.850  INFO 22018 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+˜2022-06-24 14:30:18.966  INFO 22018 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+¥2022-06-24 14:30:18.966  INFO 22018 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1992 ms
+›2022-06-24 14:30:19.901  INFO 22018 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+¡2022-06-24 14:30:19.963  INFO 22018 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
+¯2022-06-24 14:30:19.991  INFO 22018 --- [    Test worker] calculator.WebCalculatorApplication      : Started WebCalculatorApplication in 3.833 seconds (JVM running for 4.762)
+Ÿ2022-06-24 14:30:20.480  INFO 22018 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+Ž2022-06-24 14:30:20.480  INFO 22018 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+†2022-06-24 14:30:20.483  INFO 22018 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+[1;31m
+Start test 2[0m
+[1;31m
+Start test 3[0m
+[1;31m
+Start test 4[0m
