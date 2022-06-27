@@ -311,7 +311,7 @@ files:
     </body>
     </html>
   learner_created: true
-- name: src/cinema/Seats.java
+- name: src/cinema/Cinema.java
   visible: true
   text: |
     package cinema;
@@ -411,7 +411,7 @@ files:
 
     }
   learner_created: true
-- name: src/cinema/Controller.java
+- name: src/cinema/CinemaController.java
   visible: true
   text: |
     package cinema;
@@ -459,6 +459,15 @@ files:
         }
     }
   learner_created: true
+- name: src/cinema/Error.java
+  visible: true
+  learner_created: true
+- name: src/cinema/Statistics.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/13377#comment
-status: Unchecked
-record: -1
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sun, 26 Jun 2022 23:45:48 UTC
+record: 3
