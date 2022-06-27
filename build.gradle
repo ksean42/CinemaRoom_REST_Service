@@ -1,69 +1,22 @@
-apply plugin: 'hyperskill'
-
-subprojects {
-    apply plugin: 'application'
-    apply plugin: 'java'
-
-    def userJava = Integer.parseInt(JavaVersion.current().getMajorVersion())
-    def hsJava = Integer.parseInt(hs.java.version)
-    def testJava = Math.max(userJava, hsJava)
-
-    java.toolchain.languageVersion = JavaLanguageVersion.of(testJava)
-
-    compileJava {
-        javaCompiler = javaToolchains.compilerFor {
-            languageVersion = JavaLanguageVersion.of(userJava)
-        }
-    }
-
-    compileTestJava {
-        javaCompiler = javaToolchains.compilerFor {
-            languageVersion = JavaLanguageVersion.of(testJava)
-        }
-    }
-
-    repositories {
-        mavenCentral()
-        maven { url "https://jitpack.io" }
-    }
-
-    dependencies {
-        testImplementation 'com.github.hyperskill:hs-test:release-SNAPSHOT'
-    }
-
-    configurations.all {
-        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
-    }
-
-    sourceSets {
-        main.java.srcDir 'src'
-        test.java.srcDir 'test'
-    }
-
-    test {
-        systemProperty "file.encoding", "utf-8"
-        outputs.upToDateWhen { false }
-    }
-
-    compileJava.options.encoding = 'utf-8'
-    tasks.withType(JavaCompile) {
-        options.encoding = 'utf-8'
-    }
+plugins {
+	id 'org.springframework.boot' version '2.7.1'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
 }
 
-project(':util') {
-    dependencies {
-        implementation 'com.github.hyperskill:hs-test:release-SNAPSHOT'
-    }
+group = 'com.cinemaroom'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
 }
 
-configure(subprojects.findAll {it.name != 'util'}) {
-    dependencies {
-        testImplementation project(':util').sourceSets.main.output
-        testImplementation project(':util').sourceSets.test.output
-    }
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-wrapper {
-    gradleVersion = hs.gradle.version
+tasks.named('test') {
+	useJUnitPlatform()
 }
